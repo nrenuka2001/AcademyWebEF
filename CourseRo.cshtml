@@ -1,0 +1,36 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model AcademyWebEF.BusinessEntities.Course
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <form>
+
+                <label>CourseTitle</label>
+                <label class="form-control">@Model.CourseTitle</label>
+
+                <label>Duration In Days</label>
+                <label class="form-control">@Model.DurationInDays</label>
+
+                <label>Price</label>
+                <label class="form-control">@Model.Price.</label>
+
+                <label>IsActive</label>
+                <label class="form-control">@Model.IsActive</label>
+
+               
+
+                <div style="margin-top:20px;">
+                    <a href="@Url.Action("CoursesList","Course")" style="margin-right:5px;" class="btn btn-secondary">Back</a>
+                </div>
+
+            </form>
+        </div>
+        <div class="col-6"></div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model AcademyWebEF.Models.StudentEditorModel
+
+@{
+    Layout = "_Layout";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-6">
+            <form method="post"
+                  asp-controller="Student"
+                  asp-action="Update">
+
+                <h2>Update Student</h2>
+                <hr />
+
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="StudentName"></label>
+                    <input class="form-control" asp-for="StudentName" />
+                    <span asp-validation-for="StudentName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RollNo"></label>
+                    <input class="form-control" asp-for="RollNo" />
+                    <span asp-validation-for="RollNo" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DateOfBirth"></label>
+                    <input class="form-control" asp-for="DateOfBirth" />
+                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email"></label>
+                    <input class="form-control" asp-for="Email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Mobile"></label>
+                    <input class="form-control" asp-for="Mobile" />
+                    <span asp-validation-for="Mobile" class="text-danger"></span>
+                </div>
+
+                <input asp-for="StudentID" />
+
+                <div style="margin-top:20px;">
+                    <a href="@Url.Action("StudentsList","Student")" style="margin-right:5px;" class="btn btn-secondary">Back</a>
+
+                    <button type="submit" class="btn btn-primary">Update Student</button>
+                </div>
+
+
+            </form>
+        </div>
+        <div class="col-6"></div>
+    </div>
+</div>
